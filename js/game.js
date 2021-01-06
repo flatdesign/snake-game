@@ -35,6 +35,19 @@ function drawGame() {
   ctx.fillStyle = "white";
   ctx.font = "50px Arial";
   ctx.fillText(score, box * 2.5, box * 1.7);
+
+  let snakeX = snake[0].x;
+  let snakeY = snake[0].y;
+
+  if(snakeX == food.x && snakeY == food.y) {
+    score++;
+    food = {
+      x: Math.floor((Math.random() * 17 + 1)) * box,
+      y: Math.floor((Math.random() * 15 + 3)) * box,
+    };
+  } else {
+    snake.pop();
+  }
 }
 
 let game = setInterval(drawGame, 100);
