@@ -25,13 +25,13 @@ snake[0] = {
 let dir;
 
 const direction = (event) => {
-  if(event.keyCode == 37 && dir != "right")
+  if(event.keyCode === 37 && dir !== "right")
     dir = "left";
-  else if(event.keyCode == 38 && dir != "down")
+  else if(event.keyCode === 38 && dir !== "down")
     dir = "up";
-  else if(event.keyCode == 39 && dir != "left")
+  else if(event.keyCode === 39 && dir !== "left")
     dir = "right";
-  else if(event.keyCode == 40 && dir != "up")
+  else if(event.keyCode === 40 && dir !== "up")
     dir = "down";
 }
 
