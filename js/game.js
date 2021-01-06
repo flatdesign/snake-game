@@ -37,7 +37,7 @@ const direction = (event) => {
 
 document.addEventListener("keydown", direction);
 
-const eatTail = (head, arr) => {
+const checkTail = (head, arr) => {
   for(let i = 0; i < arr.length; i++) {
     if(head.x == arr[i].x && head.y == arr[i].y)
       clearInterval(game);
