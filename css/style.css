@@ -2,3 +2,12 @@ canvas {
   display: block;
   margin: 0 auto;
 }
+
+body {
+  background-color: #000;
+}
+
+h1 {
+  text-align: center;
+  color: #ffffff
+}
