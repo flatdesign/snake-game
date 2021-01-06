@@ -22,11 +22,9 @@ snake[0] = {
   y: 10 * box
 };
 
-document.addEventListener("keydown", direction);
-
 let dir;
 
-function direction(event) {
+const direction = (event) => {
   if(event.keyCode == 37 && dir != "right")
     dir = "left";
   else if(event.keyCode == 38 && dir != "down")
@@ -37,14 +35,16 @@ function direction(event) {
     dir = "down";
 }
 
-function eatTail(head, arr) {
+document.addEventListener("keydown", direction);
+
+const eatTail = (head, arr) => {
   for(let i = 0; i < arr.length; i++) {
     if(head.x == arr[i].x && head.y == arr[i].y)
       clearInterval(game);
   }
 }
 
-function drawGame() {
+const drawGame = () => {
   ctx.drawImage(ground, 0, 0);
 
   ctx.drawImage(foodImg, food.x, food.y);
